@@ -52,7 +52,7 @@ Count and name items in:
 - `~/.claude/plugins/marketplaces/` (count)
 - `~/.claude/shell-snapshots/` (count: proxy for Bash tool usage)
 
-Also scan `~/Documents/` and `~/Desktop/` for any `.claude/skills/` subfolders (max depth 3): these are project-local skills.
+Also scan `~/Documents/` and `~/Desktop/` for any `.claude/skills/` subfolders (use `find` with max depth 6 so GitHub-repo-nested skill dirs like `~/Documents/GitHub/{repo}/.claude/skills/` are included). These are project-local skills and often outnumber the user-global ones by an order of magnitude. Count distinct skill directories across all locations. Report the total plus a breakdown by parent repo if any single location has more than 20.
 
 ### 1c. MCP config on disk
 
